@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3080437-4EED-4E8F-858D-0D6E2752F47F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tavisca.Platform.Common.Tests</RootNamespace>
+    <AssemblyName>Tavisca.Platform.Common.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AerospikeClient, Version=3.2.0.0, Culture=neutral, PublicKeyToken=26e01ad6884636d6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aerospike.Client.3.2.3\lib\net40\AerospikeClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.3.23.1\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.DynamoDBv2, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.DynamoDBv2.3.3.2.1\lib\net45\AWSSDK.DynamoDBv2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.KeyManagementService, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.KeyManagementService.3.3.3\lib\net45\AWSSDK.KeyManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.S3.3.3.11\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Consul, Version=0.6.4.7, Culture=neutral, PublicKeyToken=20a6ad9a81df1d95, processorArchitecture=MSIL">
+      <HintPath>..\packages\Consul.0.6.4.7\lib\net45\Consul.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4, Version=1.0.9.93, Culture=neutral, PublicKeyToken=62e1b5ec1eec9bdd, processorArchitecture=MSIL">
+      <HintPath>..\packages\lz4net.1.0.9.93\lib\net4-client\LZ4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.5.9.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.5.9\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Neo.Lua, Version=5.3.0.0, Culture=neutral, PublicKeyToken=fdb0cd4fe8a6e3b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\NeoLua.0.9.14\lib\net4\Neo.Lua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.6.2.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.3.6.2\lib\net45\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.1.3.394, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.4.1.3.394\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=4.1.3.394, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.4.1.3.394\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.ServiceStack.4.0.0.0\lib\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tavisca.Frameworks.Parallel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Parallel.2.0.0.1\lib\net45\Tavisca.Frameworks.Parallel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tavisca.Frameworks.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tavisca.Frameworks.Serialization.3.0.0.0\lib\net461\Tavisca.Frameworks.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AerospikeClientFactoryTest.cs" />
+    <Compile Include="AerospikeStateProviderTests.cs" />
+    <Compile Include="Aws\S3StoreFactoryTests.cs" />
+    <Compile Include="Aws\S3StoreTests.cs" />
+    <Compile Include="Aws\TestErrorHandler.cs" />
+    <Compile Include="CompositeSinkFixture.cs" />
+    <Compile Include="Configuration\ConsulConfigurationStoreTest.cs" />
+    <Compile Include="Configuration\ConfigUpdateEventTest.cs" />
+    <Compile Include="Configuration\EventBusConnectionTest.cs" />
+    <Compile Include="Configuration\SecureConfigurationStoreTests.cs" />
+    <Compile Include="CounterProviderTests.cs" />
+    <Compile Include="CreditCardValidatorTests.cs" />
+    <Compile Include="Crypto\AesCryptoServiceTests.cs" />
+    <Compile Include="Crypto\CachedCryptoKeyProviderTests.cs" />
+    <Compile Include="Aws\CryptoKeyStoreTests.cs" />
+    <Compile Include="Aws\DataKeyHelper.cs" />
+    <Compile Include="Aws\KmsClientFactoryTests.cs" />
+    <Compile Include="Aws\KmsCryptoKeyProviderTests.cs" />
+    <Compile Include="ExchangeRate\CurrencyConverterTest.cs" />
+    <Compile Include="ExchangeRate\DummyConfigurationStore.cs" />
+    <Compile Include="ExchangeRate\DummyExchangeRateProvider.cs" />
+    <Compile Include="ExchangeRate\DynamoDBRepositoryTest.cs" />
+    <Compile Include="ExchangeRate\ExchangeRateRepositoryTest.cs" />
+    <Compile Include="ExchangeRate\PerodicExchangeRateProviderTest.cs" />
+    <Compile Include="ExchangeRate\RefreshingDBRepository.cs" />
+    <Compile Include="ExchangeRate\StaticDBRepository.cs" />
+    <Compile Include="LocalEventBusTests.cs" />
+    <Compile Include="Logging\ApiKeyFilterFixture.cs" />
+    <Compile Include="Logging\JsonLogFormatterFixture.cs" />
+    <Compile Include="Logging\LoggerFixture.cs" />
+    <Compile Include="Logging\LoggingFixture.cs" />
+    <Compile Include="Logging\LogMaskingFixture.cs" />
+    <Compile Include="Logging\LogWriterFixture.cs" />
+    <Compile Include="Logging\PayloadFixture.cs" />
+    <Compile Include="Monotone\AerospikeInstanceDataStoreTest.cs" />
+    <Compile Include="Monotone\WebFarmConfigurationTest.cs" />
+    <Compile Include="Configuration\CachedConfigurationStoreTest.cs" />
+    <Compile Include="Configuration\ConfigurationProviderTest.cs" />
+    <Compile Include="Configuration\ConfigurationValueTest.cs" />
+    <Compile Include="Configuration\ConsulClientTest.cs" />
+    <Compile Include="Configuration\EventBusTest.cs" />
+    <Compile Include="Monotone\IdGeneratorFixture.cs" />
+    <Compile Include="LockProviderTests.cs" />
+    <Compile Include="Metrics\MetricsFixture.cs" />
+    <Compile Include="ProfilerTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedisLockProviderTests.cs" />
+    <Compile Include="RmqTest.cs" />
+    <Compile Include="RoundRobinPoolFixture.cs" />
+    <Compile Include="SerializationFixture.cs" />
+    <Compile Include="SessionStoreTests.cs" />
+    <Compile Include="SettingsProvider.cs" />
+    <Compile Include="SignatureGeneratorFixture.cs" />
+    <Compile Include="SpoolerFixture.cs" />
+    <Compile Include="StateProviderTests.cs" />
+    <Compile Include="StubStateManager.cs" />
+    <Compile Include="Translators\TranslatorTests.cs" />
+    <Compile Include="WebCaller\HttpClientConfiguratorTests.cs" />
+    <Compile Include="WebCaller\HttpClientResponseBuilder.cs" />
+    <Compile Include="WebCaller\HttpClientTests.cs" />
+    <Compile Include="WebCaller\HttpStub.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Aerospike\Tavisca.Common.Plugins.Aerospike.csproj">
+      <Project>{8937c6f6-7d1d-4fad-a65b-1cfb99ad2ee7}</Project>
+      <Name>Tavisca.Common.Plugins.Aerospike</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.csproj">
+      <Project>{ab914ba9-0038-43fc-9dda-e9553abe3850}</Project>
+      <Name>Tavisca.Common.Plugins.Aws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.BinarySerializer\Tavisca.Common.Plugins.BinarySerializer.csproj">
+      <Project>{3d2d4c62-6c75-4b8e-b771-474d3896e639}</Project>
+      <Name>Tavisca.Common.Plugins.BinarySerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Consul\Tavisca.Common.Plugins.Configuration.csproj">
+      <Project>{9578cb32-2083-4b2b-80f7-5c95298fa03b}</Project>
+      <Name>Tavisca.Common.Plugins.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Crypto\Tavisca.Common.Plugins.Crypto.csproj">
+      <Project>{864975b0-61d8-4ec6-bb06-40511403b1da}</Project>
+      <Name>Tavisca.Common.Plugins.Crypto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.EnterpriseLibrary\Tavisca.Common.Plugins.EnterpriseLibrary.csproj">
+      <Project>{14e433da-2afa-499e-ab44-a12f51f88f9c}</Project>
+      <Name>Tavisca.Common.Plugins.EnterpriseLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.ExchangeRate\Tavisca.Common.Plugins.ExchangeRate.csproj">
+      <Project>{aa3afaa4-b579-408e-b3ab-1d778e5d9622}</Project>
+      <Name>Tavisca.Common.Plugins.ExchangeRate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.JsonSerializer\Tavisca.Common.Plugins.JsonSerializer.csproj">
+      <Project>{da32dc0b-8865-401f-a236-21b757c8b224}</Project>
+      <Name>Tavisca.Common.Plugins.JsonSerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.RabbitMq\Tavisca.Common.Plugins.RabbitMq.csproj">
+      <Project>{7180bf67-ae3e-4769-8e3a-5bc617704278}</Project>
+      <Name>Tavisca.Common.Plugins.RabbitMq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.csproj">
+      <Project>{eb73bcb8-ee4b-4ceb-ab47-0ab86e51408a}</Project>
+      <Name>Tavisca.Common.Plugins.RecyclableStreamPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.csproj">
+      <Project>{D8F79165-0B4E-41E8-9EBF-D1DB5183358B}</Project>
+      <Name>Tavisca.Common.Plugins.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.StatsD\Tavisca.Common.Plugins.StatsD.csproj">
+      <Project>{E925D23A-158C-43DE-B987-CBE05780EFB7}</Project>
+      <Name>Tavisca.Common.Plugins.StatsD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.StructureMap\Tavisca.Common.Plugins.StructureMap.csproj">
+      <Project>{b5d002d5-7123-4648-abbd-5d013bf1b44c}</Project>
+      <Name>Tavisca.Common.Plugins.StructureMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.csproj">
+      <Project>{0E282446-4149-4819-974E-FE23ECB10C72}</Project>
+      <Name>Tavisca.Platform.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.csproj">
+      <Project>{6e51c703-f680-45ac-b76e-774176175de3}</Project>
+      <Name>Tavisca.Platform.Common.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.csproj">
+      <Project>{69DB2FCD-3F10-4E8E-A9AE-EB53E638803C}</Project>
+      <Name>Tavisca.Platform.Common.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common\Tavisca.Platform.Common.csproj">
+      <Project>{68b980e4-eb86-4883-a7ef-a14a1e133136}</Project>
+      <Name>Tavisca.Platform.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.DynamoDBv2.3.3.2.1\analyzers\dotnet\cs\AWSSDK.DynamoDBv2.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.KeyManagementService.3.3.3\analyzers\dotnet\cs\AWSSDK.KeyManagementService.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.S3.3.3.11\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

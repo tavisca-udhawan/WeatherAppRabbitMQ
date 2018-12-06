@@ -1,0 +1,677 @@
+﻿PUT http://logs.stage.oski.io/_template/_template/oskilogs_templates 
+{
+  "order": 1,
+  "template": "oskilogs-*",
+  "mappings": {
+    "oskilogging": {
+      "dynamic_templates": [
+        {
+          "geo_point_field_mapping": {
+            "match_mapping_type": "*",
+            "match": "geo_*",
+            "mapping": {
+              "type": "geo_point"
+            }
+          }
+        },
+        {
+          "ip_field_mapping": {
+            "match_mapping_type": "*",
+            "match": "ip_*",
+            "mapping": {
+              "type": "ip"
+            }
+          }
+        },
+        {
+          "ip_field_mapping": {
+            "match_mapping_type": "*",
+            "path_match" : "json_rq_headers.oski-user-ip",
+            "mapping": {
+              "type": "ip"
+            }
+          }
+        },
+        {
+          "ip_field_mapping": {
+            "match_mapping_type": "*",
+            "path_match": "json_rq_headers.oski-userIPAddress",
+            "mapping": {
+              "type": "ip"
+            }
+          }
+        },
+        {
+          "ip_field_mapping": {
+            "match_mapping_type": "*",
+            "path_match": "json_rq_headers.user-ip",
+            "mapping": {
+              "type": "ip"
+            }
+          }
+        },
+        {
+          "ip_field_mapping": {
+            "match_mapping_type": "*",
+            "path_match": "json_rq_headers.X-Real-IP",
+            "mapping": {
+              "type": "ip"
+            }
+          }
+        },
+        {
+          "json_field_mapping": {
+            "match_mapping_type": "*",
+            "match": "json_*",
+            "mapping": {
+              "type": "object"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "api",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "app_name",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "app_txid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "attr_status",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "booking_id",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "callType",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "category",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "cid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "connectorSessionId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "dropoff_airport_code",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "error_code",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "ex_type",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "http_method",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.correlationId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.Host",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.host",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.Language",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-correlationId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-correlationid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-culture",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-displayCurrencyCode",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-stackId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-stateId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-tenantid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.oski-tenantId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.stackId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.User-Agent",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.user-agent",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rq_headers.version",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rs_headers.oski-correlationId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rs_headers.oski-correlationid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "path_match": "json_rs_headers.oski-stackId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "method_name",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "methodname",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "pickup_airport_code",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "session_id",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "SessionId",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "sid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "status",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "supplier_error_code",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "supplier_id",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "supplier_name",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "supplierid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "suppliername",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "tid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "tracingToken",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "tripid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "txid",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "type",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "user_token",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "userIdentifier",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "verb",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "text_field_mapping": {
+            "match_mapping_type": "string",
+            "match": "*",
+            "mapping": {
+              "type": "text",
+              "fielddata": true,
+              "analyzer": "pattern_analyzer"
+            }
+          }
+        },
+        {
+          "integer_field_mapping": {
+            "match_mapping_type": "*",
+            "match": "http_status_code",
+            "mapping": {
+              "type": "integer"              
+            }
+          }
+        }
+      ]
+    }
+  },
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "pattern_analyzer": {
+          "type": "pattern",
+          "pattern": "[^0-9A-Za-z_.-]",
+          "lowercase": true
+        }
+      }
+    }
+  }
+}

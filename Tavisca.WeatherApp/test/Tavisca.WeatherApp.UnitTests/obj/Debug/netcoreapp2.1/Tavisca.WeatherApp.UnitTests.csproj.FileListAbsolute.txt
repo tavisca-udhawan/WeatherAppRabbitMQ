@@ -1,0 +1,9 @@
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.deps.json
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.AssemblyInfoInputs.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.AssemblyInfo.cs
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\test\Tavisca.WeatherApp.UnitTests\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.UnitTests.csprojAssemblyReference.cache

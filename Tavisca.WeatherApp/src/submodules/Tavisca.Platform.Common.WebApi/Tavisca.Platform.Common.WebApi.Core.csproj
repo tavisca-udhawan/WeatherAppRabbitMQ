@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Tavisca.Platform.Common.WebApi</RootNamespace>
+    <AssemblyName>Tavisca.Platform.Common.WebApi</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NET_STANDARD;NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NET_STANDARD;NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Cors\**" />
+    <Compile Remove="DelegatingHandlers\**" />
+    <Compile Remove="DependencyInjection\**" />
+    <EmbeddedResource Remove="Cors\**" />
+    <EmbeddedResource Remove="DelegatingHandlers\**" />
+    <EmbeddedResource Remove="DependencyInjection\**" />
+    <None Remove="Cors\**" />
+    <None Remove="DelegatingHandlers\**" />
+    <None Remove="DependencyInjection\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Filter\ApiMeterAttribute.cs" />
+    <Compile Remove="Filter\ExceptionLoggingFilterAttribute.cs" />
+    <Compile Remove="Filter\UnhandledExceptionFilterAttribute.cs" />
+    <Compile Remove="Filter\UnhandledExceptionResponder.cs" />
+    <Compile Remove="Formatting\JsonFormatter.cs" />
+    <Compile Remove="Formatting\VersionedMediaTypeFormatter.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="app.config" />
+    <None Remove="packages.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj" />
+  </ItemGroup>
+</Project>

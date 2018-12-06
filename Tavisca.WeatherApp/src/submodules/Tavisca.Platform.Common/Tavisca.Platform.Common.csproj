@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68B980E4-EB86-4883-A7EF-A14A1E133136}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tavisca.Platform.Common</RootNamespace>
+    <AssemblyName>Tavisca.Platform.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Microsoft.Extensions.Logging.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Microsoft.IO.RecyclableMemoryStream.1.2.2\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEventBus\ApplicationEvent.cs" />
+    <Compile Include="ApplicationEventBus\ApplicationEventObserver.cs" />
+    <Compile Include="ApplicationEventBus\IApplicationEventBus.cs" />
+    <Compile Include="Async\AsyncTasks.cs" />
+    <Compile Include="Async\ITaskPool.cs" />
+    <Compile Include="Async\RoundRobinPool.cs" />
+    <Compile Include="Async\TaskPool.cs" />
+    <Compile Include="Cache\CacheHit.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\InProcCache.cs" />
+    <Compile Include="ConfigurationHandler\ConfigurationManager.cs" />
+    <Compile Include="Configurations\ConfigurationStoreConnectionStatus.cs" />
+    <Compile Include="Configurations\IConfigurationProvider.cs" />
+    <Compile Include="Configurations\ISensitiveDataProvider.cs" />
+    <Compile Include="Containers\IContainerFactory.cs" />
+    <Compile Include="Containers\IModule.cs" />
+    <Compile Include="Containers\Registration.cs" />
+    <Compile Include="Content\Circle.cs" />
+    <Compile Include="Content\Country.cs" />
+    <Compile Include="Content\Currency.cs" />
+    <Compile Include="Content\Point.cs" />
+    <Compile Include="Content\SmallestEnclosingCircle.cs" />
+    <Compile Include="Context\AmbientContextBase.cs" />
+    <Compile Include="Context\AmbientContextScope.cs" />
+    <Compile Include="Context\CallContext.cs" />
+    <Compile Include="Counter\IAtomicCounter.cs" />
+    <Compile Include="Crypto\ICryptoKeyProvider.cs" />
+    <Compile Include="ExceptionManagement\ExceptionPolicy.cs" />
+    <Compile Include="ExceptionManagement\IErrorHandler.cs" />
+    <Compile Include="ExceptionManagement\Policies.cs" />
+    <Compile Include="ExceptionManagement\TaskExtensions.cs" />
+    <Compile Include="ExchangeRate\IExchangeRateService.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Crypto\ICryptoService.cs" />
+    <Compile Include="Extensions\Retry.cs" />
+    <Compile Include="FileStore\IFileStoreFactory.cs" />
+    <Compile Include="LockManagement\AsyncReadWriteLock.cs" />
+    <Compile Include="LockManagement\AwaitableLock.cs" />
+    <Compile Include="LockManagement\GlobalLock.cs" />
+    <Compile Include="LockManagement\ILockProvider.cs" />
+    <Compile Include="LockManagement\ILockSettings.cs" />
+    <Compile Include="LockManagement\ILockSettingsProvider.cs" />
+    <Compile Include="LockManagement\IRetryController.cs" />
+    <Compile Include="LockManagement\LinearRetryController.cs" />
+    <Compile Include="LockManagement\LockType.cs" />
+    <Compile Include="LockManagement\ExponentialRetryController.cs" />
+    <Compile Include="Logging\ApiKeyFilter.cs" />
+    <Compile Include="Logging\Constants.cs" />
+    <Compile Include="Logging\FluentInterface\DelegateFilterConfiguration.cs" />
+    <Compile Include="Logging\FluentInterface\FilterStateConfiguration.cs" />
+    <Compile Include="Logging\FluentInterface\JsonPayloadFilterStateConfiguration.cs" />
+    <Compile Include="Logging\ILoggingHttpFilter.cs" />
+    <Compile Include="Logging\LoggingHttpFilterExtensions.cs" />
+    <Compile Include="Logging\IApplicationLogWriter.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\ILogFilter.cs" />
+    <Compile Include="Containers\DependencyException.cs" />
+    <Compile Include="Containers\IDependencyContainer.cs" />
+    <Compile Include="Containers\ObjectFactory.cs" />
+    <Compile Include="Headers\HeaderNames.cs" />
+    <Compile Include="Logging\IMask.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LogWriter.cs" />
+    <Compile Include="Logging\Model\ApiLog.cs" />
+    <Compile Include="Logging\Model\ExceptionLog.cs" />
+    <Compile Include="Logging\Model\GeoPoint.cs" />
+    <Compile Include="Logging\FluentInterface\JsonPayloadMaskingRule.cs" />
+    <Compile Include="Logging\Model\LogBase.cs" />
+    <Compile Include="Logging\Model\Map.cs" />
+    <Compile Include="Logging\Model\Payload.cs" />
+    <Compile Include="Logging\FluentInterface\PayloadFieldMaskingRule.cs" />
+    <Compile Include="Logging\FluentInterface\PayloadMaskingRule.cs" />
+    <Compile Include="Logging\FluentInterface\QueryStringMaskingRule.cs" />
+    <Compile Include="Logging\Model\SimpleLog.cs" />
+    <Compile Include="Logging\Model\TraceLog.cs" />
+    <Compile Include="Logging\FluentInterface\XmlPayloadMaskingRule.cs" />
+    <Compile Include="Logging\PaymentFilter.cs" />
+    <Compile Include="Logging\FluentInterface\QueryStringFilterStateConfiguration.cs" />
+    <Compile Include="Logging\FluentInterface\StreamLogMaskingFilter.cs" />
+    <Compile Include="Logging\Sink\CompositeSink.cs" />
+    <Compile Include="Logging\FluentInterface\TextLogMaskingFilter.cs" />
+    <Compile Include="Logging\FluentInterface\TextMaskingRule.cs" />
+    <Compile Include="Logging\FluentInterface\XmlPayloadFilterStateConfiguration.cs" />
+    <Compile Include="MemoryStreamPool\IMemoryStreamPool.cs" />
+    <Compile Include="Monotone\InstanceInfo.cs" />
+    <Compile Include="Profiling\DoNotProfileAttribute.cs" />
+    <Compile Include="Profiling\Profiling.cs" />
+    <Compile Include="FileStore\IFileStore.cs" />
+    <Compile Include="Profiling\TraceProfileContext.cs" />
+    <Compile Include="ServiceBus\IMessageWithRejectionSupport.cs" />
+    <Compile Include="Metrics\IMeteringFactory.cs" />
+    <Compile Include="Metrics\Metering.cs" />
+    <Compile Include="Metrics\IMeter.cs" />
+    <Compile Include="Metrics\NullMeter.cs" />
+    <Compile Include="Monotone\BigId.cs" />
+    <Compile Include="Monotone\IdConfiguration.cs" />
+    <Compile Include="Monotone\IdGenerator.cs" />
+    <Compile Include="Monotone\IdGeneration.cs" />
+    <Compile Include="Monotone\IInstanceDataStore.cs" />
+    <Compile Include="Monotone\SingleMachineConfiguration.cs" />
+    <Compile Include="Monotone\WebFarmConfiguration.cs" />
+    <Compile Include="Profiling\ProfileContext.cs" />
+    <Compile Include="Profiling\ProfilerInterceptor.cs" />
+    <Compile Include="Profiling\ProfileTreeNode.cs" />
+    <Compile Include="Profiling\PerformanceLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\ISerializerFactory.cs" />
+    <Compile Include="ServiceBus\IBus.cs" />
+    <Compile Include="ServiceBus\Actor.cs" />
+    <Compile Include="ServiceBus\IActor.cs" />
+    <Compile Include="ServiceBus\IMessage.cs" />
+    <Compile Include="ServiceBus\InProcBus.cs" />
+    <Compile Include="ServiceBus\ServiceBus.cs" />
+    <Compile Include="SessionStore\DataItem.cs" />
+    <Compile Include="SessionStore\Exceptions\SessionConfigurationException.cs" />
+    <Compile Include="SessionStore\Exceptions\SessionException.cs" />
+    <Compile Include="SessionStore\ExternalConfiguration.cs" />
+    <Compile Include="SessionStore\ISessionDataProvider.cs" />
+    <Compile Include="SessionStore\ISessionProviderFactory.cs" />
+    <Compile Include="SessionStore\ISessionStore.cs" />
+    <Compile Include="SessionStore\ItemKey.cs" />
+    <Compile Include="SessionStore\SessionConfiguration.cs" />
+    <Compile Include="SessionStore\SessionProviderBase.cs" />
+    <Compile Include="SessionStore\Exceptions\SessionResources.Designer.cs">
+      <DependentUpon>SessionResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SessionStore\SessionStore.cs" />
+    <Compile Include="Spooling\ArrayExtension.cs" />
+    <Compile Include="Spooling\Bookmark.cs" />
+    <Compile Include="Spooling\IStateManager.cs" />
+    <Compile Include="Spooling\SignatureGenerator.cs" />
+    <Compile Include="Spooling\Spooler.cs" />
+    <Compile Include="Spooling\SpoolerKeyCollection.cs" />
+    <Compile Include="Spooling\SpoolerResult.cs" />
+    <Compile Include="Spooling\SpoolerResults.cs" />
+    <Compile Include="Spooling\StringHelper.cs" />
+    <Compile Include="StateManagement\IStateProvider.cs" />
+    <Compile Include="Validators\CreditCardValidator.cs" />
+    <Compile Include="WebCaller\Contracts\IContent.cs" />
+    <Compile Include="WebCaller\Internal\ByteContent.cs" />
+    <Compile Include="WebCaller\Internal\DefaultMemoryStreamPool.cs" />
+    <Compile Include="WebCaller\Internal\HttpConnectorFilter.cs" />
+    <Compile Include="WebCaller\Internal\HttpFilter.cs" />
+    <Compile Include="WebCaller\Http.cs" />
+    <Compile Include="WebCaller\Internal\DefaultFaultPolicy.cs" />
+    <Compile Include="WebCaller\Internal\HttpClientConfigurator.cs" />
+    <Compile Include="WebCaller\HttpSettings.cs" />
+    <Compile Include="WebCaller\HttpMethods.cs" />
+    <Compile Include="WebCaller\Contracts\IHttpConnector.cs" />
+    <Compile Include="WebCaller\Internal\DelegatedFaultPolicy.cs" />
+    <Compile Include="WebCaller\Internal\LoggingHttpFilter.cs" />
+    <Compile Include="WebCaller\Internal\ObjectContent.cs" />
+    <Compile Include="WebCaller\Model\CompressionType.cs" />
+    <Compile Include="WebCaller\Model\HttpRequest.cs" />
+    <Compile Include="WebCaller\Model\HttpRequestExtensions.cs" />
+    <Compile Include="WebCaller\Model\HttpResponse.cs" />
+    <Compile Include="WebCaller\Contracts\IFaultPolicy.cs" />
+    <Compile Include="WebCaller\Model\HttpResponseExtensions.cs" />
+    <Compile Include="WebCaller\Model\ResponseOrFault.cs" />
+    <Compile Include="WebCaller\WebRequestConnector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logging\ElasticSearchTemplates\LoggingTemplate.txt" />
+    <Content Include="Logging\KibanaWMSSettings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.csproj">
+      <Project>{0E282446-4149-4819-974E-FE23ECB10C72}</Project>
+      <Name>Tavisca.Platform.Common.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SessionStore\Exceptions\SessionResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SessionResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

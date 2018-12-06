@@ -1,0 +1,78 @@
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.deps.json
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.runtimeconfig.json
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.runtimeconfig.dev.json
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Configuration.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.WebApi.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Core.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.OpenWeatherAdapter.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Plugins.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Service.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.WebApi.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Service.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Configuration.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Core.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.OpenWeatherAdapter.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Plugins.pdb
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csprojAssemblyReference.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csproj.CoreCompileInputs.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorAssemblyInfo.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorAssemblyInfo.cs
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.AssemblyInfoInputs.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.AssemblyInfo.cs
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorTargetAssemblyInfo.cache
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csproj.CopyComplete
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.dll
+C:\Users\udhawan\Desktop\WeatherApp Git Final\nextgen-onboarding\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.deps.json
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.runtimeconfig.json
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.runtimeconfig.dev.json
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Configuration.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.WebApi.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Core.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.OpenWeatherAdapter.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Plugins.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Service.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.WebApi.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Service.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Configuration.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Core.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.OpenWeatherAdapter.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Plugins.pdb
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csprojAssemblyReference.cache
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csproj.CoreCompileInputs.cache
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorAssemblyInfo.cache
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorAssemblyInfo.cs
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.AssemblyInfoInputs.cache
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.AssemblyInfo.cs
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.RazorTargetAssemblyInfo.cache
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.csproj.CopyComplete
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.dll
+C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Web\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Web.pdb

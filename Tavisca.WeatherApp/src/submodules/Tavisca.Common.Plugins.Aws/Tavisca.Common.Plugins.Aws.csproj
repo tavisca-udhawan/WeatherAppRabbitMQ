@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB914BA9-0038-43FC-9DDA-E9553ABE3850}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tavisca.Common.Plugins.Aws</RootNamespace>
+    <AssemblyName>Tavisca.Common.Plugins.Aws</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.Core.3.3.23.1\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.KeyManagementService, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.KeyManagementService.3.3.3\lib\net45\AWSSDK.KeyManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.KinesisFirehose, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.KinesisFirehose.3.3.1.6\lib\net45\AWSSDK.KinesisFirehose.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.S3.3.3.11\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleSystemsManagement, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.SimpleSystemsManagement.3.3.21.1\lib\net45\AWSSDK.SimpleSystemsManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SecurityToken, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\AWSSDK.SecurityToken.3.3.4.4\lib\net45\AWSSDK.SecurityToken.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AwaitableLock.cs" />
+    <Compile Include="ByteHelper.cs" />
+    <Compile Include="Exceptions\ConfigurationException.cs" />
+    <Compile Include="FirehoseClient.cs" />
+    <Compile Include="FirehoseClientFactory.cs" />
+    <Compile Include="FirehoseSettings.cs" />
+    <Compile Include="FirehoseSink.cs" />
+    <Compile Include="Exceptions\FaultCodes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaultCodes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\FaultMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FaultMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="KMS\IKmsClientFactory.cs" />
+    <Compile Include="Exceptions\CommunicationException.cs" />
+    <Compile Include="Exceptions\ErrorMessages.cs" />
+    <Compile Include="Exceptions\ServerSide.cs" />
+    <Compile Include="Exceptions\SystemException.cs" />
+    <Compile Include="KMS\ICryptoKeyStore.cs" />
+    <Compile Include="KMS\KmsClientFactory.cs" />
+    <Compile Include="KMS\KmsSettings.cs" />
+    <Compile Include="KMS\KmsCryptoKeyProvider.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="KMS\CryptoKeyStore.cs" />
+    <Compile Include="ParameterStore\ParameterStoreProvider.cs" />
+    <Compile Include="S3\S3Settings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S3\S3Store.cs" />
+    <Compile Include="S3\S3StoreFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="$(SolutionDir)\packages\AWSSDK.KinesisFirehose.3.3.1.6\analyzers\dotnet\cs\AWSSDK.KinesisFirehose.CodeAnalysis.dll" />
+    <Analyzer Include="$(SolutionDir)\packages\AWSSDK.KeyManagementService.3.3.3\analyzers\dotnet\cs\AWSSDK.KeyManagementService.CodeAnalysis.dll" />
+    <Analyzer Include="$(SolutionDir)\packages\AWSSDK.S3.3.3.11\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+    <Analyzer Include="$(SolutionDir)\packages\AWSSDK.SimpleSystemsManagement.3.3.21.1\analyzers\dotnet\cs\AWSSDK.SimpleSystemsManagement.CodeAnalysis.dll" />
+    <Analyzer Include="$(SolutionDir)\packages\AWSSDK.SecurityToken.3.3.4.4\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.Consul\Tavisca.Common.Plugins.Configuration.csproj">
+      <Project>{9578cb32-2083-4b2b-80f7-5c95298fa03b}</Project>
+      <Name>Tavisca.Common.Plugins.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.csproj">
+      <Project>{EB73BCB8-EE4B-4CEB-AB47-0AB86E51408A}</Project>
+      <Name>Tavisca.Common.Plugins.RecyclableStreamPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.csproj">
+      <Project>{0E282446-4149-4819-974E-FE23ECB10C72}</Project>
+      <Name>Tavisca.Platform.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.csproj">
+      <Project>{6e51c703-f680-45ac-b76e-774176175de3}</Project>
+      <Name>Tavisca.Platform.Common.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tavisca.Platform.Common\Tavisca.Platform.Common.csproj">
+      <Project>{68B980E4-EB86-4883-A7EF-A14A1E133136}</Project>
+      <Name>Tavisca.Platform.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Exceptions\FaultCodes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FaultCodes.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Tavisca.Common.Plugins.Aws</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exceptions\FaultMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FaultMessages.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Tavisca.Common.Plugins.Aws</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
