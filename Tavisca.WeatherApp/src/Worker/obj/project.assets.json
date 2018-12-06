@@ -7656,11 +7656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
+      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
       "projectName": "Worker",
-      "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
+      "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
       "packagesPath": "C:\\Users\\udhawan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Worker\\obj\\",
+      "outputPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7680,8 +7680,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Service\\Tavisca.WeatherApp.Service.csproj": {
-              "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Service\\Tavisca.WeatherApp.Service.csproj"
+            "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Service\\Tavisca.WeatherApp.Service.csproj": {
+              "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Service\\Tavisca.WeatherApp.Service.csproj"
             }
           }
         }

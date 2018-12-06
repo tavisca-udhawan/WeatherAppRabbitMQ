@@ -6656,11 +6656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj",
+      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj",
       "projectName": "Tavisca.WeatherApp.Models",
-      "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj",
+      "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj",
       "packagesPath": "C:\\Users\\udhawan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\obj\\",
+      "outputPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6680,14 +6680,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Common.Plugins.Redis\\Tavisca.Common.Plugins.Redis.Core.csproj": {
-              "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Common.Plugins.Redis\\Tavisca.Common.Plugins.Redis.Core.csproj"
+            "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Common.Plugins.Redis\\Tavisca.Common.Plugins.Redis.Core.csproj": {
+              "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Common.Plugins.Redis\\Tavisca.Common.Plugins.Redis.Core.csproj"
             },
-            "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.Plugins.Json\\Tavisca.Platform.Common.Plugins.Json.Core.csproj": {
-              "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.Plugins.Json\\Tavisca.Platform.Common.Plugins.Json.Core.csproj"
+            "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.Plugins.Json\\Tavisca.Platform.Common.Plugins.Json.Core.csproj": {
+              "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.Plugins.Json\\Tavisca.Platform.Common.Plugins.Json.Core.csproj"
             },
-            "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common\\Tavisca.Platform.Common.Core.csproj": {
-              "projectPath": "C:\\Users\\udhawan\\Desktop\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common\\Tavisca.Platform.Common.Core.csproj"
+            "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common\\Tavisca.Platform.Common.Core.csproj": {
+              "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common\\Tavisca.Platform.Common.Core.csproj"
             }
           }
         }

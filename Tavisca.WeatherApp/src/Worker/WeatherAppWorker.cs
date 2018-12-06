@@ -9,6 +9,7 @@ using Tavisca.WeatherApp.Service;
 using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Model;
 using Tavisca.WeatherApp.Service.Data_Contracts.Response;
+using Tavisca.WeatherApp.Service.FileSystem;
 
 namespace Worker
 {
@@ -22,12 +23,12 @@ namespace Worker
             using (var channel = connection.CreateModel())
             {
                 channel.QueueDeclare(queue: "weatherApp",
-                                     durable: true,
+                                     durable: false,
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: null);
 
-                channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+                //channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
                 Console.WriteLine(" [*] Waiting for messages.");
               
@@ -43,7 +44,10 @@ namespace Worker
                     string outputjson = message.Replace("\\", "");
                     WeatherAppJsonRequest obj = JsonConvert.DeserializeObject<WeatherAppJsonRequest>(outputjson);
                      request.cityName = obj.Init_request;
-                    GetReport(request);
+
+                    WeatherReportResponse WeatherResponse = GetReport(request);
+                    ReadFile file = new ReadFile();
+                    file.ReadFromFile(WeatherResponse,obj.SessionId);
                     //  channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
                 };
                 channel.BasicConsume(queue: "weatherApp",
@@ -54,10 +58,11 @@ namespace Worker
                 Console.ReadLine();
             }
             }
-        public static void GetReport(CityNameRequest request)
+        public static WeatherReportResponse GetReport(CityNameRequest request)
         {
             WeatherAppService weatherAppService = new WeatherAppService();
-            var response = weatherAppService.GetReportByCityName(request);
+            WeatherReportResponse response = weatherAppService.GetReportByCityName(request);
+            return response;
         }
     }
 }

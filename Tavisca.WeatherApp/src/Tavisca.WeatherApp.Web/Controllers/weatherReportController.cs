@@ -2,6 +2,7 @@
 using Tavisca.WeatherApp.Service;
 using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;
+using Tavisca.WeatherApp.Service.Data_Contracts.Model;
 
 namespace Tavisca.WeatherApp.Web.Controllers
 {
@@ -54,6 +55,14 @@ namespace Tavisca.WeatherApp.Web.Controllers
         public IActionResult InitWeatherReportByCityName([FromBody] CityNameRequest request)
         {
             var response = weatherAppService.GetInitWeatherReportByCityName(request);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        [Route("result_by_sessionid")]
+        public IActionResult WeatherReportResultByCityName([FromBody] WeatherReportByCityNameInitResponse request)
+        {
+            var response = weatherAppService.GetWeatherResult(request);
             return Ok(response);
         }
     }

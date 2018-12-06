@@ -5,6 +5,7 @@ using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;
 using Tavisca.WeatherApp.Service.Data_Contracts.Model;
 using Tavisca.WeatherApp.Service.Data_Contracts.Response;
+using Tavisca.WeatherApp.Service.FileSystem;
 using Tavisca.WeatherApp.Service.Queues;
 using Tavisca.WeatherApp.Service.Translators;
 using Tavisca.WeatherApp.Service.Validators;
@@ -67,7 +68,7 @@ namespace Tavisca.WeatherApp.Service
             string sessionId = Guid.NewGuid().ToString() ;
 
             //2. create data and store somewhere
-            FileSystem dataStore = new FileSystem();
+            Core.FileSystem dataStore = new Core.FileSystem();
             WeatherReportByCityNameInitResponse data = dataStore.CreateFile(sessionId);
 
             //. push into queue
@@ -86,15 +87,12 @@ namespace Tavisca.WeatherApp.Service
 
         public WeatherReportResultsResponse GetWeatherResult(WeatherReportByCityNameInitResponse request)
         {
-
-            //1. validate request
-            //var requestModel = request.ToModel();
-           
-            //var data = sessionStore.Get(request.SessionId);
-
-         
-
-            return new WeatherReportResultsResponse() {  };
+            ReadFile file = new ReadFile();
+            WeatherReportResultsResponse result= file.GetFileResult(request.SessionId);
+            return new WeatherReportResultsResponse() {
+                Status = result.Status,
+                WeatherDetails = result.WeatherDetails
+            };
         }
 
     }

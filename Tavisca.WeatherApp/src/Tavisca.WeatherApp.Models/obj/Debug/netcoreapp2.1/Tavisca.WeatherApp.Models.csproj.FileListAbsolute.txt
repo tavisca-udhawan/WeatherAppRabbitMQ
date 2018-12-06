@@ -38,3 +38,23 @@ C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\De
 C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.csproj.CopyComplete
 C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.dll
 C:\Users\udhawan\Desktop\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.deps.json
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.Redis.Core.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Plugins.Json.Core.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Core.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Common.Plugins.RecyclableStreamPool.Core.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\bin\Debug\netcoreapp2.1\Tavisca.Platform.Common.Models.Core.pdb
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.csprojAssemblyReference.cache
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.AssemblyInfoInputs.cache
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.AssemblyInfo.cs
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.csproj.CopyComplete
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.dll
+C:\Users\udhawan\Desktop\rabbitmq git\WeatherAppRabbitMQ\Tavisca.WeatherApp\src\Tavisca.WeatherApp.Models\obj\Debug\netcoreapp2.1\Tavisca.WeatherApp.Models.pdb
