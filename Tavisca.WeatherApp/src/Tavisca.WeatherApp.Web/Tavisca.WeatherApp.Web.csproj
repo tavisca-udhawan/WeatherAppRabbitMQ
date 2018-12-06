@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\submodules\Tavisca.Platform.Common.WebApi\Tavisca.Platform.Common.WebApi.Core.csproj" />
+    <ProjectReference Include="..\Tavisca.WeatherApp.Core\Tavisca.WeatherApp.Core.csproj" />
     <ProjectReference Include="..\Tavisca.WeatherApp.Models\Tavisca.WeatherApp.Models.csproj" />
     <ProjectReference Include="..\Tavisca.WeatherApp.Service\Tavisca.WeatherApp.Service.csproj" />
   </ItemGroup>

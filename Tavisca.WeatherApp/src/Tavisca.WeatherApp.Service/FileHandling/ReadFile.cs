@@ -7,10 +7,11 @@ using Tavisca.WeatherApp.Models;
 using Tavisca.WeatherApp.Service.Data_Contracts.Model;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;
 
 namespace Tavisca.WeatherApp.Service.FileSystem
 {
-    public class ReadFile
+    public class ReadFile:IFileOperations
     {
         public void ReadFromFile(WeatherReportResponse result, string id)
         {

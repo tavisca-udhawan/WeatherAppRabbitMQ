@@ -8,7 +8,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Tavisca.Platform.Common.WebApi.Middlewares;
+using Tavisca.WeatherApp.Core;
+using Tavisca.WeatherApp.Model.Interfaces;
+using Tavisca.WeatherApp.Models.Interfaces;
+using Tavisca.WeatherApp.Service;
+using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;
+using Tavisca.WeatherApp.Service.FileSystem;
+using Tavisca.WeatherApp.Service.Store;
 using Tavisca.WeatherApp.Web.Middleware.Extensions;
+
 namespace Tavisca.WeatherApp.Web
 {
     public class Startup
@@ -24,6 +32,11 @@ namespace Tavisca.WeatherApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IWeatherAppService, WeatherAppService>();
+            services.AddSingleton<IWeatherApp, Tavisca.WeatherApp.Core.WeatherApp>();
+            services.AddSingleton<ISessionStore, SessionStore>();
+            services.AddSingleton<IFileInit, FileSystem>();
+            services.AddSingleton<IFileOperations, ReadFile>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

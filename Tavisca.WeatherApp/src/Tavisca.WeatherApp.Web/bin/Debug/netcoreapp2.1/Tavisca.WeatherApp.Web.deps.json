@@ -32,6 +32,7 @@
           "RabbitMQ.Client": "5.1.0",
           "System.Linq": "4.3.0",
           "Tavisca.Platform.Common.WebApi": "1.0.0",
+          "Tavisca.WeatherApp.Core": "1.0.0",
           "Tavisca.WeatherApp.Models": "1.0.0",
           "Tavisca.WeatherApp.Service": "1.0.0"
         },

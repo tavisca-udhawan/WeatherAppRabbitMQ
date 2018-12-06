@@ -1,4 +1,5 @@
 ﻿using System;
+using Tavisca.Common.Plugins.SessionStore;
 using Tavisca.WeatherApp.Core;
 using Tavisca.WeatherApp.Model.Interfaces;
 using Tavisca.WeatherApp.Service.Data_Contracts;
@@ -6,7 +7,6 @@ using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;
 using Tavisca.WeatherApp.Service.Data_Contracts.Model;
 using Tavisca.WeatherApp.Service.Data_Contracts.Response;
 using Tavisca.WeatherApp.Service.FileSystem;
-using Tavisca.WeatherApp.Service.Queues;
 using Tavisca.WeatherApp.Service.Translators;
 using Tavisca.WeatherApp.Service.Validators;
 using Core = Tavisca.WeatherApp.Core;
@@ -14,14 +14,17 @@ namespace Tavisca.WeatherApp.Service
 {
     public class WeatherAppService : IWeatherAppService
     {
-        private readonly IWeatherApp weatherApp;
-
-        //private readonly ISessionStore sessionStore;
-
-        //private readonly IQueue queue;
-        public WeatherAppService()
+        private readonly IWeatherApp _weatherApp;
+        private readonly IFileOperations _FileOperation;
+        private readonly ISessionStore _sessionStore;
+        private readonly ISessionStore _queueBus;
+      
+        public WeatherAppService(IWeatherApp weatherApp,ISessionStore sessionStore,ISessionStore queueBus,IFileOperations fileOperations)
         {
-            weatherApp = new Core.WeatherApp();
+            this._weatherApp = weatherApp;
+            this._sessionStore = sessionStore;
+            this._queueBus = queueBus;
+            this._FileOperation = fileOperations;
         }
         public WeatherReportResponse GetReportByCityName(CityNameRequest request)
         {
@@ -29,66 +32,46 @@ namespace Tavisca.WeatherApp.Service
             var requestModel = request.ToModel();
             //Here we will call the core service
             //Convert back the model to data contract
-            var responseModel = weatherApp.GetWeatherReport(requestModel);
+            var responseModel = _weatherApp.GetWeatherReport(requestModel);
             return responseModel.ToDataContract();
         }
         public WeatherReportResponse GetReportByCityId(CityIdRequest request)
         {
             Validation.EnsureValid(request, new WeatherReportByCityIdRequestValidator());
             var requestModel = request.ToModel();
-            //Here we will call the core service
-            //Convert back the model to data contract
-            var responseModel = weatherApp.GetWeatherReport(requestModel);
+            var responseModel = _weatherApp.GetWeatherReport(requestModel);
             return responseModel.ToDataContract();
         }
         public WeatherReportResponse GetReportByZipCode(ZipCodeRequest request)
         {
             Validation.EnsureValid(request, new WeatherReportByZipCodeRequestValidator());
             var requestModel = request.ToModel();
-            //Here we will call the core service
-            //Convert back the model to data contract
-            var responseModel = weatherApp.GetWeatherReport(requestModel);
+            var responseModel = _weatherApp.GetWeatherReport(requestModel);
             return responseModel.ToDataContract();
         }
         public WeatherReportResponse GetReportByGeoCode(GeoCodeRequest request)
         {
             Validation.EnsureValid(request.GeoCode, new GeoCodeValidator());
             var requestModel = request.ToModel();
-            //Here we will call the core service
-            //Convert back the model to data contract
-            var responseModel = weatherApp.GetWeatherReport(requestModel);
+            var responseModel = _weatherApp.GetWeatherReport(requestModel);
             return responseModel.ToDataContract();
         }
 
         public WeatherReportByCityNameInitResponse GetInitWeatherReportByCityName(CityNameRequest request)
         {
-            //1. validate request
             Validation.EnsureValid(request, new WeatherReportByCityNameRequestValidator());
-            //var requestModel = request.ToModel();
-            string sessionId = Guid.NewGuid().ToString() ;
-
-            //2. create data and store somewhere
-            Core.FileSystem dataStore = new Core.FileSystem();
-            WeatherReportByCityNameInitResponse data = dataStore.CreateFile(sessionId);
-
-            //. push into queue
-            RabbitMQDataStore store = new RabbitMQDataStore();
-            WeatherReportByCityNameInitResponse storeId=store.Enqueue(data,request);
-
-            //Here we will call the core service
-            //Convert back the model to data contract
-            //var responseModel = weatherApp.GetWeatherReport(requestModel);
-            //return responseModel.ToDataContract();
-            return new WeatherReportByCityNameInitResponse() { SessionId = storeId.SessionId};
+            string sessionId = Guid.NewGuid().ToString();
+            WeatherReportByCityNameInitResponse data = _sessionStore.CreateFile(sessionId);
+            WeatherReportByCityNameInitResponse QueueId=_queueBus.Enqueue(data,request);
+            return new WeatherReportByCityNameInitResponse() {
+               SessionId = QueueId.SessionId
+           };
         }
-
-
-
 
         public WeatherReportResultsResponse GetWeatherResult(WeatherReportByCityNameInitResponse request)
         {
-            ReadFile file = new ReadFile();
-            WeatherReportResultsResponse result= file.GetFileResult(request.SessionId);
+          
+            WeatherReportResultsResponse result= _FileOperation.GetFileResult(request.SessionId);
             return new WeatherReportResultsResponse() {
                 Status = result.Status,
                 WeatherDetails = result.WeatherDetails

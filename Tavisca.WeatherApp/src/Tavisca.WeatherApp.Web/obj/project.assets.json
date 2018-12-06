@@ -14137,6 +14137,7 @@
       "RabbitMQ.Client >= 5.1.0",
       "System.Linq >= 4.3.0",
       "Tavisca.Platform.Common.WebApi >= 1.0.0",
+      "Tavisca.WeatherApp.Core >= 1.0.0",
       "Tavisca.WeatherApp.Models >= 1.0.0",
       "Tavisca.WeatherApp.Service >= 1.0.0"
     ]
@@ -14174,6 +14175,9 @@
           "projectReferences": {
             "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.WebApi\\Tavisca.Platform.Common.WebApi.Core.csproj": {
               "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\submodules\\Tavisca.Platform.Common.WebApi\\Tavisca.Platform.Common.WebApi.Core.csproj"
+            },
+            "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Core\\Tavisca.WeatherApp.Core.csproj": {
+              "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Core\\Tavisca.WeatherApp.Core.csproj"
             },
             "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj": {
               "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Tavisca.WeatherApp.Models\\Tavisca.WeatherApp.Models.csproj"
