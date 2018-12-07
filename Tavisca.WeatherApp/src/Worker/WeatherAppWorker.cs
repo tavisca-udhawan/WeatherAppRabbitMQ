@@ -16,6 +16,7 @@ using Tavisca.WeatherApp.Service.Store;
 using Microsoft.Extensions.DependencyInjection;
 using Tavisca.WeatherApp.Model.Interfaces;
 using System.Threading.Tasks;
+using Tavisca.WeatherApp.Models.Interfaces;
 
 namespace Worker
 {
@@ -26,7 +27,9 @@ namespace Worker
             var services = new ServiceCollection()
                 .AddTransient<IWeatherApp, WeatherApp>()
                 .AddTransient<ISessionStore, SessionStore>()
-                .AddTransient<IFileOperations, ReadFile>();
+                .AddTransient<IFileOperations, ReadFile>()
+                .AddTransient<IFileInit, FileSystem>()
+                .AddTransient<IWeatherReportResponseService, WeatherReportResponseService>();
             var serviceProvider = services.BuildServiceProvider();
 
             // resolve the dependency graph
