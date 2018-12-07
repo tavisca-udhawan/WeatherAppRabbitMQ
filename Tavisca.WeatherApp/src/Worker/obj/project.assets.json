@@ -7676,9 +7676,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
-      "projectName": "Worker",
-      "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Worker.csproj",
+      "projectUniqueName": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Tavisca.WeatherApp.Worker.csproj",
+      "projectName": "Tavisca.WeatherApp.Worker",
+      "projectPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\Tavisca.WeatherApp.Worker.csproj",
       "packagesPath": "C:\\Users\\udhawan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\udhawan\\Desktop\\rabbitmq git\\WeatherAppRabbitMQ\\Tavisca.WeatherApp\\src\\Worker\\obj\\",
       "projectStyle": "PackageReference",

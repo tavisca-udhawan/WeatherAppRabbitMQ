@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using Tavisca.WeatherApp.Model;
 using Tavisca.WeatherApp.Service;
 using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;

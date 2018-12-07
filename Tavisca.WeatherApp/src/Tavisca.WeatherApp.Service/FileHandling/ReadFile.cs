@@ -13,7 +13,7 @@ namespace Tavisca.WeatherApp.Service.FileSystem
 {
     public class ReadFile:IFileOperations
     {
-        public void ReadFromFile(WeatherReportResponse result, string id)
+        public void WriteToFile(WeatherReportResponse result, string id)
         {
             string json = File.ReadAllText(@"C:\Users\udhawan\Desktop\" + id + ".txt");
             WeatherReportResultsResponse jsonObj = JsonConvert.DeserializeObject<WeatherReportResultsResponse>(json);

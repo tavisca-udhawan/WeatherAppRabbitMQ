@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Tavisca.WeatherApp.Model;
 using Tavisca.WeatherApp.Models.Interfaces;
 using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;

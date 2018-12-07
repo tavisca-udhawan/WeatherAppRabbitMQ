@@ -8,7 +8,7 @@ namespace Tavisca.WeatherApp.Service.Data_Contracts.Interfaces
 {
     public interface IFileOperations
     {
-        void ReadFromFile(WeatherReportResponse result, string id);
+        void WriteToFile(WeatherReportResponse result, string id);
         WeatherReportResultsResponse GetFileResult(string id);
     }
 }

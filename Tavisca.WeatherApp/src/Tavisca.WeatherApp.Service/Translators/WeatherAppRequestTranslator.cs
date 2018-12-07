@@ -16,13 +16,7 @@ namespace Tavisca.WeatherApp.Service.Translators
             };
         }
 
-        public static WeatherReportRequestModel ToModel(this WeatherInitRequestByCityName request)
-        {
-            return new WeatherReportRequestModel
-            {
-                cityName = request.CityName
-            };
-        }
+      
 
         public static WeatherReportRequestModel ToModel(this CityIdRequest request)
         {

@@ -11,8 +11,6 @@ namespace Tavisca.WeatherApp.Core
             private readonly IWeatherDataProvider _weatherDataProvider;
             public WeatherApp()
             {
-                //Call the plugin
-                //Return the response
                 _weatherDataProvider = new WeatherReportDataProvider();
             }
         public WeatherReportResponseModel GetWeatherReport(WeatherReportRequestModel request)

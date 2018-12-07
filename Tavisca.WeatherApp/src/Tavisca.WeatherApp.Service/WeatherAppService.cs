@@ -1,6 +1,7 @@
 ﻿using System;
 using Tavisca.Common.Plugins.SessionStore;
 using Tavisca.WeatherApp.Core;
+using Tavisca.WeatherApp.Model;
 using Tavisca.WeatherApp.Model.Interfaces;
 using Tavisca.WeatherApp.Service.Data_Contracts;
 using Tavisca.WeatherApp.Service.Data_Contracts.Interfaces;

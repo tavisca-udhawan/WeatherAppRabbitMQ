@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Tavisca.WeatherApp.Model.Interfaces;
 using System.Threading.Tasks;
 using Tavisca.WeatherApp.Models.Interfaces;
+using Tavisca.WeatherApp.Model;
 
 namespace Worker
 {
@@ -74,7 +75,7 @@ namespace Worker
         {
             return Task.Run(() => {
             var factory = new ConnectionFactory() { HostName = "localhost" };
-            CityNameRequest request = new CityNameRequest();
+                CityNameRequest request = new CityNameRequest();
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
@@ -83,8 +84,7 @@ namespace Worker
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: null);
-
-                //channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+                   
 
                 Console.WriteLine(" [*] Waiting for messages.");
 
@@ -103,8 +103,7 @@ namespace Worker
 
                     WeatherReportResponse WeatherResponse = GetReport(request);
                     ReadFile file = new ReadFile();
-                    file.ReadFromFile(WeatherResponse, obj.SessionId);
-                    //  channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                    file.WriteToFile(WeatherResponse, obj.SessionId);
                 };
                 channel.BasicConsume(queue: "weatherApp",
                                      autoAck: false,

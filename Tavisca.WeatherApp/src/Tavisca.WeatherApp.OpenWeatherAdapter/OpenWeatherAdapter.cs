@@ -3,6 +3,7 @@ using Tavisca.Platform.Common.Models;
 using Tavisca.WeatherApp.Model;
 using Tavisca.WeatherApp.Model.Interfaces;
 using Tavisca.WeatherApp.Model.Models;
+using Tavisca.WeatherApp.Models.Logging;
 using Tavisca.WeatherApp.OpenWeatherAdapter.Model;
 using Tavisca.WeatherApp.OpenWeatherAdapter.Translators;
 
@@ -21,6 +22,7 @@ namespace Tavisca.WeatherApp.OpenWeatherAdapter
                 throw new BaseApplicationException(ErrorMessages.MandatoryFieldMissing("OpenWeatherSvcSettings"), FaultCodes.MandatoryFieldMissing);
             var url = GenerateUrl(requestModel);
             var responseObj = Execute<OpenWeatherResponse>(url);
+            Loggers.AddTrace("Getting Response from third-party Api");
             return responseObj.ToModel();
         }
         private string GenerateUrl(WeatherReportRequestModel requestModel)
@@ -34,6 +36,7 @@ namespace Tavisca.WeatherApp.OpenWeatherAdapter
                 url = $"{_settings.Url}?zip={requestModel.zipCode}&APPID={_settings.ApiKey}";
             else if (requestModel.geoCode.Latitude != null && requestModel.geoCode.Longitude != null)
                 url = $"{_settings.Url}?lat={requestModel.geoCode.Latitude}&lon={requestModel.geoCode.Longitude}&APPID={_settings.ApiKey}";
+            Loggers.AddTrace("generating URL");
             return url;
         }
     }
